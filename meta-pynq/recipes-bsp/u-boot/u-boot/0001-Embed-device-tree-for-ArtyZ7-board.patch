@@ -1,0 +1,21 @@
+From dacb30906747e79bbb14a0bc522e28bc33653778 Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Sami=20Pietik=C3=A4inen?= <sami.pietikainen@wapice.com>
+Date: Mon, 18 Jun 2018 09:20:13 +0300
+Subject: [PATCH] Embed device tree for ArtyZ7 board
+
+---
+ configs/zynq_artyz7_defconfig | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/configs/zynq_artyz7_defconfig b/configs/zynq_artyz7_defconfig
+index 60515a22e2..40e8ba860b 100644
+--- a/configs/zynq_artyz7_defconfig
++++ b/configs/zynq_artyz7_defconfig
+@@ -48,3 +48,4 @@ CONFIG_USB_GADGET_DOWNLOAD=y
+ CONFIG_G_DNL_MANUFACTURER="Xilinx"
+ CONFIG_G_DNL_VENDOR_NUM=0x03fd
+ CONFIG_G_DNL_PRODUCT_NUM=0x0300
++CONFIG_OF_EMBED=y
+-- 
+2.17.1
+

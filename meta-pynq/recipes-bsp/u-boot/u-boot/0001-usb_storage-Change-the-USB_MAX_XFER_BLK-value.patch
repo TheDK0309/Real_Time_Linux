@@ -1,0 +1,28 @@
+From ef342d3bf0b4154f645fd1b511232e506fd9f858 Mon Sep 17 00:00:00 2001
+From: Jan Lipponen <jan.lipponen@wapice.com>
+Date: Tue, 21 Aug 2018 09:18:41 +0300
+Subject: [PATCH] usb_storage: Change the USB_MAX_XFER_BLK value
+
+---
+ common/usb_storage.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/common/usb_storage.c b/common/usb_storage.c
+index 7e6e52d2ec..c42ca5842d 100644
+--- a/common/usb_storage.c
++++ b/common/usb_storage.c
+@@ -104,9 +104,9 @@ struct us_data {
+ /*
+  * The U-Boot EHCI driver can handle any transfer length as long as there is
+  * enough free heap space left, but the SCSI READ(10) and WRITE(10) commands are
+- * limited to 65535 blocks.
++ * limited to 2048 blocks.
+  */
+-#define USB_MAX_XFER_BLK	65535
++#define USB_MAX_XFER_BLK	2048
+ #else
+ #define USB_MAX_XFER_BLK	20
+ #endif
+-- 
+2.17.1
+
